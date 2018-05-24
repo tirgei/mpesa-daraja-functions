@@ -1,0 +1,9 @@
+/functions/node_modules
+/functions/package.json
+/functions/package-lock.json
+/public
+.vscode/
+.firebaserc
+database.rules.json
+firebase.json
+storage.rules
