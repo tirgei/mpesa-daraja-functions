@@ -98,9 +98,12 @@ exports.updateWallet = functions.https.onRequest((request, response) => {
 		const setBalance = admin.database().ref('users/' + userId + '/balance').set(balance);
 
 		const payload = {
-			notification: {
-				title: "Transaction successful",
-				body: "Your wallet has been updated with amount " + amount + ". New balance is " + balance
+			data: {
+				type: "balance_update",
+				title: "\"Transaction successful\"",
+				image: "\"\"",
+				timestamp: new Date().getTime().toString(),
+				message: "\"Your wallet has been updated with amount " + amount + ". New balance is " + balance+"\""
 			}
 		}
 	
